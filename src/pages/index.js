@@ -17,7 +17,7 @@ const Home = () => {
 const [isActive, setIsActive] = useState(false)
 
 const HandleClick = () => {
-    setIsActive(true)
+    setIsActive(!isActive)
     console.log(isActive)
 };
     const toggle = () => {
@@ -35,7 +35,7 @@ const HandleClick = () => {
         <InfoSection {...homeObjTwo} />
         <InfoSection {...homeObjOne} />
         <InfoSection isActive={isActive} setIsActive={setIsActive} HandleClick={HandleClick} {...homeObjThree} />
-        <InfoContainer id="book"> <Quote className={isActive ? "JobberOpen" : "JobberClosed"}/></InfoContainer>
+        <InfoContainer id="book"> <Quote HandleClick={HandleClick} className={isActive ? "JobberOpen" : "JobberClosed"}/></InfoContainer>
         <Footer />
         
         </>

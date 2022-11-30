@@ -3,12 +3,13 @@ import { Helmet } from "react-helmet";
 import "./Jobber.scss"
 
 
-const Quote =({className}) =>{
+const Quote =({className, HandleClick}) =>{
  
     return (
 
       <div className="JobberOpen2">
 
+<div onClick={HandleClick}>x </div>
 <div className={className}>
       <div className="Application" id="f6f2802e-49e8-477b-b405-8b2b18dded97">
         <Helmet>
